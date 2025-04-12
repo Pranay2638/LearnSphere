@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
     cors({
-      origin: "http://localhost:5173", // Allow only frontend origin
+      origin: "https://learnsphere-1-u85v.onrender.com", // Allow only frontend origin
       credentials: true, // Allow cookies & authentication headers
       methods: ["GET", "POST", "PUT", "DELETE"],
       allowedHeaders: ["Content-Type", "Authorization"],
