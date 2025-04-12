@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Footer from "../Components/Footer"
 import Header from "../Components/Navbar"
 import { discussionAPI } from "../api/axiosInstance"
-import DiscussionUpload from "../Components/discussionupload"
+import DiscussionUpload from "../Components/Discussionupload"
 
 const Discussions = () => {
 
