@@ -14,7 +14,7 @@ const Videos = () => {
       console.log("videos Fetched successfully", response)
       setVideos(response.data)
     } catch (error) {
-      console.log("error fetching notes", error)
+      console.log("error fetching videos", error)
     }
   }
 
