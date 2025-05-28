@@ -5,8 +5,7 @@ import {Server} from 'socket.io'
 import {createServer} from 'http'
 const app = express();
 
-app.use(express.json({limit: '16kb'}))
-app.use(cookieParser());
+
 app.use(
     cors({
      // origin: ["http://localhost:5173", "https://learnsphere-1-u85v.onrender.com"], // Allow only frontend origin
@@ -16,6 +15,8 @@ app.use(
       allowedHeaders: ["Content-Type", "Authorization"],
     })
   );
+  app.use(express.json({limit: '16kb'}))
+  app.use(cookieParser());
   app.use("/uploads", express.static("src/uploads"));
 
 app.get('/',(req,res) => {
