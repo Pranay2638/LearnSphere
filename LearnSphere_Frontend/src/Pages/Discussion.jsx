@@ -43,15 +43,15 @@ const Discussions = () => {
 
     useEffect(() => {
       getDiscussion();
-        socket.on("messageReceived", (newDiscussion) => {
-        console.log("New discussion received via socket:", newDiscussion);
-        setDiscussion((prev) => [newDiscussion, ...prev]);
-    });
+    //     socket.on("messageReceived", (newDiscussion) => {
+    //     console.log("New discussion received via socket:", newDiscussion);
+    //     setDiscussion((prev) => [newDiscussion, ...prev]);
+    // });
 
-    // ✅ Cleanup on unmount
-      return () => {
-        socket.off("messageReceived");
-      };
+    // // ✅ Cleanup on unmount
+    //   return () => {
+    //     socket.off("messageReceived");
+    //   };
     }, [])
     return (
       <>
