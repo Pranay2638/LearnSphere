@@ -12,8 +12,13 @@ const createVideo = asyncHandler(async(req,res) => {
     if(!title || !videoURL){
         throw new ApiError(400, "Title and videoURL are required! ")
     }
+     const BASE_URL =
+      process.env.NODE_ENV === "production"
+    ? "https://learnsphere-1s3z.onrender.com"
+    : `${req.protocol}://${req.get("host")}`; // works locally
 
-     videoURL = `${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`;
+        videoURL = `${BASE_URL}/uploads/${req.file.filename}`;
+    //  videoURL = `${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`;
 
     try {
         const video = await Video.create({
