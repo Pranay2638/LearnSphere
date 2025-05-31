@@ -3,7 +3,7 @@ import Footer from "../Components/Footer"
 import Header from "../Components/Navbar"
 import { discussionAPI } from "../api/axiosInstance"
 import DiscussionUpload from "../Components/Discussionupload"
-import socket from "../socket"
+//import socket from "../socket"
 // import { io } from "socket.io-client";
 // //const [discussions, setDiscussions] = useState([]);
 // const socket = io("https://your-backend-url.onrender.com");
