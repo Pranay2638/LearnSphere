@@ -3,7 +3,19 @@ import Footer from "../Components/Footer"
 import Header from "../Components/Navbar"
 import { discussionAPI } from "../api/axiosInstance"
 import DiscussionUpload from "../Components/Discussionupload"
+import socket from "../socket"
+// import { io } from "socket.io-client";
+// //const [discussions, setDiscussions] = useState([]);
+// const socket = io("https://your-backend-url.onrender.com");
+// useEffect(() => {
+//      socket.on("messageReceived", (newDiscussion) => {
+//      setDiscussions((prev) => [newDiscussion, ...prev]);
+//       });
 
+//      return () => {
+//      socket.off("messageReceived");
+//       };
+//     }, []);
 const Discussions = () => {
 
     const [discussion, setDiscussion] = useState([]);
@@ -31,6 +43,15 @@ const Discussions = () => {
 
     useEffect(() => {
       getDiscussion();
+        socket.on("messageReceived", (newDiscussion) => {
+        console.log("New discussion received via socket:", newDiscussion);
+        setDiscussion((prev) => [newDiscussion, ...prev]);
+    });
+
+    // ✅ Cleanup on unmount
+      return () => {
+        socket.off("messageReceived");
+      };
     }, [])
     return (
       <>

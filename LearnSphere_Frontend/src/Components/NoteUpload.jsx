@@ -66,22 +66,30 @@ const NoteUpload = ({ onUploadSuccess }) => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Title Input */}
         <div>
-          <label htmlFor="title" className="block text-sm font-medium text-gray-700">
+          {/* <label htmlFor="title" className="block text-sm font-medium text-gray-700">
             Title
-          </label>
-          <input
+          </label> */}
+          {/* <input
             type="text"
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
             className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
-          />
+          /> */}
+          <input
+          type="text"
+          placeholder="Enter Title"
+          className="w-full p-3 border rounded-lg focus:outline-indigo-500"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+        />
         </div>
 
         {/* Description Input */}
         <div>
-          <label htmlFor="description" className="block text-sm font-medium text-gray-700">
+          {/* <label htmlFor="description" className="block text-sm font-medium text-gray-700">
             Description
           </label>
           <textarea
@@ -90,7 +98,14 @@ const NoteUpload = ({ onUploadSuccess }) => {
             onChange={(e) => setDescription(e.target.value)}
             required
             className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
-          ></textarea>
+          ></textarea> */}
+          <textarea
+          placeholder="Enter Video Description"
+          className="w-full p-3 border rounded-lg focus:outline-indigo-500"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+        />
         </div>
 
         {/* File Upload */}
