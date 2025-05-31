@@ -152,7 +152,7 @@ const AuthForm = ({ isSignup, onSubmit }) => {
             alt="Auth Illustration"
             className="w-72"
           />
-          <h2 className="text-white text-2xl mt-4 font-semibold text-center">
+          <h2 className="text-grey text-2xl mt-4 font-semibold text-center">
             {isSignup ? "Join the Learning Journey!" : "Welcome Back!"}
           </h2>
         </div>
