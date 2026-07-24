@@ -7,9 +7,9 @@ const Signup = () => {
 
   const handleSignup = async (formData) => {
     try {
-      console.log("Sending Data:", formData);
+      //console.log("Sending Data:", formData);
       const { data } = await API.post("/register", formData);
-      console.log(data);
+      //console.log(data);
       navigate("/");
     } catch (error) {
       console.error("Signup failed", error.response?.data?.message);

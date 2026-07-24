@@ -11,7 +11,7 @@ const Videos = () => {
   const fetchVideos = async () => {
     try {
       const response = await videoAPI.get("/get-videos")
-      console.log("videos Fetched successfully", response)
+      //console.log("videos Fetched successfully", response)
       setVideos(response.data)
     } catch (error) {
       console.log("error fetching videos", error)

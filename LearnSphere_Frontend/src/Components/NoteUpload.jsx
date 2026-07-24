@@ -28,15 +28,15 @@ const NoteUpload = ({ onUploadSuccess }) => {
     formData.append("title", title);
     formData.append("description", description);
     for (let pair of formData.entries()) {
-      console.log(pair[0], pair[1]); // Log key-value pairs
+      //console.log(pair[0], pair[1]); // Log key-value pairs
     }
-    console.log(notesAPI);
+    //console.log(notesAPI);
 
     try {
       const response = await notesAPI.post("/create-note", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      console.log("Upload successful:", response.data);
+      //console.log("Upload successful:", response.data);
       if (response.data.success) {
         setUploading(false);
         setUploadComplete(true);

@@ -34,7 +34,7 @@ const Dashboard = () => {
      const fetchUser = async () => {
       try {
         const response = await API.get("/current-user");
-        console.log(response.data)
+        //console.log(response.data)
         setUser(response.data.data)
       } catch (error) {
         console.log("user details not found", error);
@@ -44,7 +44,7 @@ const Dashboard = () => {
      const fetchUserNotes = async () => {
       try {
         const notesResponse = await notesAPI.get("/get-currUser-note");
-        console.log(notesResponse.data)
+        //console.log(notesResponse.data)
         setUserNotes(notesResponse.data.data)
       } catch (error) {
         console.log("notes not found", error)
@@ -54,7 +54,7 @@ const Dashboard = () => {
      const fetchuserVideos = async () => {
       try {
         const videoResponse = await videoAPI.get("/get-currUser-videos");
-        console.log(videoResponse.data)
+        //console.log(videoResponse.data)
         setUserVideos(videoResponse.data.data)
       } catch (error) {
         console.log("videos not found", error)
@@ -64,7 +64,7 @@ const Dashboard = () => {
      const fetchUserDiscussion = async () => {
       try {
         const discussionResponse = await discussionAPI.get("/get-currUser-discussion")
-        console.log(discussionResponse.data)
+        //console.log(discussionResponse.data)
         setUserDiscussion(discussionResponse.data.userDiscussion)
       } catch (error) {
         console.log("discussions not found"); 

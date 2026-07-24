@@ -33,7 +33,7 @@ const VideoUpload = () => {
       const response = await videoAPI.post("/upload-video", formData, {
         headers: {"Content-Type": "multipart/form-data"},
       })
-      console.log("Upload successfull", response.data)
+      //console.log("Upload successfull", response.data)
       setUploading(false)
       setUploadComplete(true)
       setTitle("")

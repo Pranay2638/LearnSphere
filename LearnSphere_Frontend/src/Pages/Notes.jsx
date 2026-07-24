@@ -13,8 +13,8 @@ const Notes = () => {
   const fetchNotes = async () => {
     try {
       const response = await notesAPI.get("/get-note");
-      console.log("Full API Response:", response); // Check full response
-      console.log("Notes Data:", response.data); // Check notes data
+      // console.log("Full API Response:", response); // Check full response
+      // console.log("Notes Data:", response.data); // Check notes data
       
       if (response.data && Array.isArray(response.data)) {
         setNotes(response.data);

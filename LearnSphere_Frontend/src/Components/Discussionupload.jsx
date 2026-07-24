@@ -11,7 +11,7 @@ const DiscussionUpload = () => {
 
        try {
         const response = await discussionAPI.post("/create-discussion", {title, message})
-        console.log("Upload successfull", response.data)
+        //console.log("Upload successfull", response.data)
         setTitle("")
         setMessage("")
        } catch (error) {

@@ -25,7 +25,7 @@ const Discussions = () => {
     const getDiscussion = async () => {
       try {
         const response = await discussionAPI.get("/get-discussion");
-        console.log("discussion fetched successfully", response)
+        //console.log("discussion fetched successfully", response)
         if (response.data && Array.isArray(response.data.discussion)) {
           setDiscussion(response.data.discussion);
         } else {
