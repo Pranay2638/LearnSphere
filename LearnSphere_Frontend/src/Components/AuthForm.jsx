@@ -192,20 +192,35 @@ const AuthForm = ({ isSignup, onSubmit }) => {
                   onChange={handleChange}
                   required
                 />
-                <InputField
+                {/* <InputField
                   name="standard"
                   placeholder="Standard"
                   value={formData.standard}
                   onChange={handleChange}
                   required
-                />
-                <InputField
+                /> */}
+                <select
+                  name="Standard"
+                  value={formData.standard}
+                  onChange={handleChange}
+                  className="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-blue-300 outline-none"
+                >
+                  <option value="">class</option>
+                  <option value="9th">9th</option>
+                  <option value="10th">10th</option>
+                </select>
+                <select
                   name="board"
-                  placeholder="Board (CBSE, ICSE, etc.)"
                   value={formData.board}
                   onChange={handleChange}
-                  required
-                />
+                  className="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-blue-300 outline-none"
+                >
+                  <option value="">Select Board</option>
+                  <option value="CBSE">CBSE</option>
+                  <option value="ICSE">ICSE</option>
+                  <option value="IGCSE">IGCSE</option>
+                  <option value="Maharashtra SSC">Maharashtra SSC</option>
+                </select>
                 <select
                   name="gender"
                   value={formData.gender}
